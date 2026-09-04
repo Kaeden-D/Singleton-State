@@ -38,10 +38,14 @@ namespace Chapter.Singleton
         private void OnGUI()
         {
 
-            GUILayout.BeginArea(new Rect(100, 0, 80, 40));
+            GUILayout.BeginArea(new Rect(100, 0, 80, 80));
             if(GUILayout.Button("Next Scene"))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+            if (GUILayout.Button("Prev Scene"))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
             }
             GUILayout.EndArea();
 
